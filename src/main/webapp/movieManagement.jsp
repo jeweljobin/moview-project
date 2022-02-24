@@ -96,9 +96,6 @@
 
 <div style="margin-top:30px; font-size: 20px;">
 	<c:forEach var="movie" items="${listMovies}">
-		<div>
-			<b>Movie Name: </b><c:out value="${movie.movieName}" />
-		</div>
 		<div class= "test" style="display:flex; align-items:center; margin-bottom: 35px; ">
 			<img style="margin-right: 70px;"  height="175px" width="300px" src="<c:out value="${movie.movieImage}"/>"/>
 			<div class="movieCards">
