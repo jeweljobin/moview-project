@@ -5,6 +5,7 @@ public class MovieCollection {
 
     private ArrayList<Movie> movies = new ArrayList<>();
     private int capacity;
+    private boolean movieResult;
 
     public MovieCollection() {
     	
@@ -19,6 +20,7 @@ public class MovieCollection {
     public List<Movie> getMovies() {
         return movies;
     }
+    
 
     public void addMovie(Movie movie) {
     	if(movies.size() != capacity) {
@@ -30,6 +32,16 @@ public class MovieCollection {
     
     	movies.remove(movie);
     
+    }
+    
+    public void updateMovie(Movie movie) {
+    	movie.movieName = "Updated Movie";
+    }
+    
+    public String getThisMovie(Movie movie) {
+    	String name = movie.movieName;
+    	movieResult = movies.contains(name);
+    	return name;
     }
     
 }
