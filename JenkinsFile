@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    tools {
+        maven "maven 3.8.2"
+        jdk "JDK 1.8"
+    }
+
+    stages {
+        stage('Initialize'){
+            steps{
+                echo "PATH = ${M2_HOME}/bin:${PATH}"
+                echo "M2_HOME = C:\Users\ASUS\apache-maven-3.8.2"
+            }
+        }
+        stage('Build') {
+            steps {
+                dir("C:\Users\ASUS\jenkinsfileproject\moview-project2") {
+                sh 'mvn -B -DskipTests clean package'
+                }
+            
+            }
+        }
+     }
+    post {
+       always {
+          junit(
+        allowEmptyResults: true,
+        testResults: '*/test-output/.xml'
+      )
+      }
+   } 
+}
