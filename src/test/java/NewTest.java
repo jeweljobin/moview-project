@@ -67,7 +67,7 @@ public void checkMovie() {
 	  System.out.println("new title: "+webDriver.getTitle());
 
 	  webDriver.navigate().to("http://localhost:8080/Moview/MovieServlet/dashboard");
-	  webDriver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[8]/div/div[3]/div[1]/a/b")).click();
+	  webDriver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[4]/div/div[3]/div[1]/a/b")).click();
 	  webDriver.findElement(By.xpath("/html/body/div/div/div/form/button")).click();
 	  
 	 
@@ -76,7 +76,7 @@ public void checkMovie() {
 public void deleteMovie() {
 	
 	  webDriver.navigate().to("http://localhost:8080/Moview/MovieServlet/dashboard");
-	  webDriver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[8]/div/div[3]/div[2]/a/b")).click();
+	  webDriver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[4]/div/div[3]/div[2]/a/b")).click();
 	  
 	 
 }
