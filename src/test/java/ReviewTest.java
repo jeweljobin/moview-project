@@ -13,7 +13,7 @@ public class ReviewTest {
   @Test
   public void checkTitle() {
 	  //Load website as a new page
-	  webDriver.navigate().to("http://localhost:8090/Moview/review.jsp");
+	  webDriver.navigate().to("http://localhost:8080/Moview/review.jsp");
 	  
 	//Assert the title to check that we are indeed in the correct website
 	  Assert.assertEquals(webDriver.getTitle(), "Insert title here");
@@ -23,18 +23,7 @@ public class ReviewTest {
     
   }
   
-  @Test
-  public void checkButtons() {
-	  
-	  webDriver.navigate().to("http://localhost:8080/Moview/review.jsp");
-	  
-	  webDriver.findElement(By.className("btn btn-success")).click(); 
-	  
-	  
-	  Assert.assertEquals(webDriver.getTitle(), "Feedback on the movie");
-      System.out.println("new title: "+webDriver.getTitle());  
-  }
-  
+
   
   
   @BeforeTest
