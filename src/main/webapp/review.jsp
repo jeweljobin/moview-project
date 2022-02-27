@@ -14,7 +14,7 @@ crossorigin="anonymous">
 </head>
 <body>
 <a href="<%=request.getContextPath()%>/HomeServlet"
-class="btn btn-success" style = "position:relative; left:50px; top:40px">Back to Movies</a>
+class="btn" style = "position:relative; left:50px; top:40px">Back to Movies</a>
 <div class="row">
 <div class="container">
 <h3 class="text-center">List of Movie Reviews</h3>
